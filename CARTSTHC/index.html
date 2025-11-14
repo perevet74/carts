@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LOST MARY® | Double The Power, Go Turbo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Orbitron:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="index">
+    <div class="lm-banner">
+      <p>
+        Products with characterizing flavors are not for sale in California and are not available for purchase or shipment to consumers in California.
+      </p>
+    </div>
+
+    <header class="lm-header" data-sticky>
+      <div class="header-inner">
+        <a class="lm-logo" href="index.html" aria-label="Lost Mary home">
+          <span>LOST</span><span>MARY</span>
+        </a>
+
+        <nav class="lm-nav" aria-label="Primary navigation">
+          <a href="index.html" data-page="index">Home</a>
+          <a href="about.html" data-page="about">About</a>
+          <a href="products.html" data-page="products">Products</a>
+          <a href="technology.html" data-page="technology">Technology</a>
+          <a href="planet.html" data-page="planet">Planet</a>
+          <a href="support.html" data-page="support">Support</a>
+          <a href="verify.html" data-page="verify">Verify</a>
+          <a href="find-store.html" data-page="find-store">Find a Store</a>
+        </nav>
+
+        <div class="header-cta">
+          <a class="lm-btn ghost" href="products.html">Go Beyond</a>
+          <a class="lm-btn solid" href="find-store.html">Find a Store</a>
+        </div>
+
+        <button id="menuToggle" class="burger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="lm-drawer" aria-label="Mobile navigation">
+        <a href="index.html" data-page="index">Home</a>
+        <a href="about.html" data-page="about">About</a>
+        <a href="products.html" data-page="products">Products</a>
+        <a href="technology.html" data-page="technology">Technology</a>
+        <a href="planet.html" data-page="planet">Planet</a>
+        <a href="blogs.html" data-page="blogs">Blogs</a>
+        <a href="support.html" data-page="support">Support</a>
+        <a href="verify.html" data-page="verify">Verify</a>
+        <a href="find-store.html" data-page="find-store">Find a Store</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-gradient"></div>
+        <div class="hero-content">
+          <div class="hero-copy">
+            <span class="hero-tag">Double the Power, Go Turbo!</span>
+            <h1>Life&#8217;s Merry</h1>
+            <p>
+              Switch between flavours as you wish, or stick to your true one. Powered by QUAQ mesh technology for consistent, satisfying flavour from first puff to last.
+            </p>
+            <div class="hero-actions">
+              <a class="lm-btn solid" href="products.html">Discover Devices</a>
+              <a class="lm-btn outline" href="blogs.html">Watch Film</a>
+            </div>
+            <ul class="hero-meta">
+              <li>Turbo Dual-Core Output</li>
+              <li>Up to 15,000 Puffs</li>
+              <li>Adaptive Airflow Control</li>
+            </ul>
+          </div>
+
+          <div class="hero-stack">
+            <article class="stack-card card-left">
+              <span class="card-label">MT15000 Turbo</span>
+              <div class="card-device">
+                <div class="device-inner"></div>
+              </div>
+            </article>
+            <article class="stack-card card-center">
+              <span class="card-label">Lost Mary 4in1</span>
+              <div class="card-device"></div>
+            </article>
+            <article class="stack-card card-right">
+              <span class="card-label">BM600 Pod</span>
+              <div class="card-device"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="brand-ticker" aria-label="Powered by Lost Mary">
+        <div class="ticker-track">
+          <span>Powered by lost mary</span>
+          <span>Go turbo</span>
+          <span>QUAQ mesh inside</span>
+          <span>Standards exhibition</span>
+          <span>Planet wonderland</span>
+        </div>
+        <div class="ticker-track" aria-hidden="true">
+          <span>Powered by lost mary</span>
+          <span>Go turbo</span>
+          <span>QUAQ mesh inside</span>
+          <span>Standards exhibition</span>
+          <span>Planet wonderland</span>
+        </div>
+      </section>
+
+      <section class="product-showcase">
+        <header class="section-header">
+          <span>Our Products</span>
+          <h2>Top Sellers &amp; Limited Collections</h2>
+          <p>
+            From high-capacity turbos to pocket-ready pods, discover the Lost Mary device that matches your flavour mode and lifestyle.
+          </p>
+        </header>
+
+        <div class="showcase-wrapper">
+          <div class="showcase-track" id="productTrack" aria-live="polite"></div>
+          <div class="showcase-nav">
+            <button class="nav-btn prev" type="button" aria-label="Previous devices"></button>
+            <button class="nav-btn next" type="button" aria-label="Next devices"></button>
+          </div>
+        </div>
+
+        <div class="showcase-dots" id="productDots" role="tablist" aria-label="Device slides"></div>
+      </section>
+
+      <section class="dual-highlight">
+        <article class="highlight-card">
+          <div class="highlight-copy">
+            <span>Go Beyond</span>
+            <h3>4in1 Turbo Platform</h3>
+            <p>
+              Instantly switch between four curated flavour pods with magnetic lock-in, LED flavour cues and flavour preserving QUAQ mesh heating.
+            </p>
+            <a class="lm-link" href="products.html">View the 4in1 Turbo lineup</a>
+          </div>
+          <div class="highlight-visual highlight-4in1"></div>
+        </article>
+
+        <article class="highlight-card dark">
+          <div class="highlight-copy">
+            <span>Technology</span>
+            <h3>QUAQ Mesh 2.0</h3>
+            <p>
+              Balanced micro-wick structure delivers consistent vapour density, reduced oil consumption and smoother throat hit across every Lost Mary device.
+            </p>
+            <a class="lm-btn ghost" href="technology.html">Explore QUAQ</a>
+          </div>
+          <div class="highlight-visual highlight-quaq"></div>
+        </article>
+      </section>
+
+      <section class="grid-panels">
+        <article class="panel">
+          <span>Planet Wonderland</span>
+          <h3>Immersive Pop-up Exhibition</h3>
+          <p>
+            Dive into our travelling experience showcasing sustainability initiatives, art collaborations and next-gen product concepts.
+          </p>
+          <a class="lm-link" href="planet.html">See the tour schedule</a>
+        </article>
+        <article class="panel">
+          <span>Standards</span>
+          <h3>Certified Quality &amp; Compliance</h3>
+          <p>
+            Lost Mary devices are rigorously tested to meet international safety and regulatory benchmarks while delivering signature flavour.
+          </p>
+          <a class="lm-link" href="technology.html">Review certifications</a>
+        </article>
+        <article class="panel">
+          <span>Support</span>
+          <h3>Verify Your Device</h3>
+          <p>
+            Protect your experience. Confirm authenticity with our verification portal before your first session and access warranty support.
+          </p>
+          <a class="lm-link" href="verify.html">Start verification</a>
+        </article>
+        <article class="panel">
+          <span>Community</span>
+          <h3>@lostmary.official.global</h3>
+          <p>
+            Follow the official channel for flavour drops, limited editions and behind-the-scenes content from the Lost Mary collective.
+          </p>
+          <div class="panel-socials">
+            <a href="https://www.instagram.com/lostmary.official.global" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://www.tiktok.com/@lostmary.official.global" target="_blank" rel="noreferrer">TikTok</a>
+            <a href="https://www.youtube.com" target="_blank" rel="noreferrer">YouTube</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="cta-strip">
+        <div class="cta-copy">
+          <span>Life&#39;s Merry</span>
+          <h3>Be first to know about Lost Mary drops.</h3>
+        </div>
+        <form class="cta-form" action="support.html" method="get">
+          <label class="sr-only" for="subscribe-email">Email address</label>
+          <input id="subscribe-email" type="email" name="email" placeholder="Enter your email" required />
+          <button class="lm-btn solid" type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="lm-footer">
+      <div class="footer-top">
+        <div class="footer-warning">
+          <strong>Warning:</strong> This product contains nicotine. Nicotine is an addictive chemical.
+        </div>
+        <div>
+          <h4>Customer Service</h4>
+          <ul>
+            <li>UK: +44 808 168 9466 (Mon-Fri, 9am - 6pm GMT)</li>
+            <li>DE: +49 30 544 48333 (Mon-Fri, 9am - 6pm CET)</li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <a href="products.html">Products</a>
+          <a href="technology.html">Technology</a>
+          <a href="planet.html">Planet</a>
+          <a href="support.html">Support</a>
+          <a href="verify.html">Verify</a>
+          <a href="find-store.html">Find a Store</a>
+        </div>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="cookies.html">Cookies Policy</a>
+          <a href="blogs.html">News &amp; Updates</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 LOST MARY. All rights reserved.</p>
+        <button class="lm-btn ghost back-to-top" type="button">Back to top</button>
+      </div>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
+

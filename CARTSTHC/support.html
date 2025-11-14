@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lost Mary Support | Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="support">
+    <div class="announcement">
+      <p>
+        Products with characterizing flavors are not for sale in California and
+        are not available for purchase or shipment to consumers in California.
+      </p>
+    </div>
+
+    <header class="site-header">
+      <div class="brand">
+        <button
+          id="menuToggle"
+          class="menu-toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="index.html" class="logo" aria-label="Lost Mary home"
+          >LOST MARY</a
+        >
+      </div>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="products.html" data-page="products">Products</a>
+        <a href="about.html" data-page="about">About Us</a>
+        <a href="technology.html" data-page="technology">Technology</a>
+        <a href="planet.html" data-page="planet">Planet</a>
+        <a href="blogs.html" data-page="blogs">Blogs</a>
+        <a href="support.html" data-page="support">Support</a>
+        <a href="verify.html" data-page="verify">Verify</a>
+        <a href="find-store.html" data-page="find-store">Find a Store</a>
+      </nav>
+      <div class="header-cta">
+        <a class="btn ghost" href="verify.html">Verify Device</a>
+        <a class="btn solid" href="find-store.html">Find a Store</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <p class="eyebrow">Support</p>
+        <h1>We&rsquo;re Here to Help 24/7</h1>
+        <p>
+          Reach out for device guidance, verification assistance, or retail
+          partner support. Our specialists respond within one business day.
+        </p>
+        <div class="hero-actions">
+          <a class="btn solid" href="#contact-form">Submit a Ticket</a>
+          <a class="btn ghost" href="verify.html">Verify Serial Number</a>
+        </div>
+      </section>
+
+      <section class="page-visual">
+        <img
+          src="assets/banner-support.svg"
+          alt="Stylised placeholder artwork representing Lost Mary support team"
+          loading="lazy"
+        />
+      </section>
+
+      <section class="section-shell">
+        <div class="contact-grid">
+          <article class="content-card">
+            <img
+              src="assets/banner-technology.svg"
+              alt="Placeholder highlighting customer service contact"
+              loading="lazy"
+            />
+            <h2>Customer Service</h2>
+            <p>
+              UK: +44 808 168 9466<br />
+              DE: +49 30 544 48333
+            </p>
+            <p>
+              Monday - Friday<br />
+              9:00 AM - 6:00 PM (local time)
+            </p>
+            <a class="link-btn" href="mailto:support@lostmary.com"
+              >Email Support</a
+            >
+          </article>
+          <article class="content-card">
+            <img
+              src="assets/banner-products.svg"
+              alt="Placeholder representing retail and wholesale support"
+              loading="lazy"
+            />
+            <h2>Retail &amp; Wholesale</h2>
+            <p>
+              Need POS assets, compliance documentation, or product training?
+              Our partner success team is ready.
+            </p>
+            <div class="contact-actions">
+              <a class="btn ghost" href="technology.html">Access Specs</a>
+              <a class="link-btn" href="support.html#contact-form"
+                >Request Toolkit</a
+              >
+            </div>
+          </article>
+          <article class="content-card">
+            <img
+              src="assets/product-bm6000.svg"
+              alt="Placeholder representing warranty support"
+              loading="lazy"
+            />
+            <h2>Warranty &amp; Returns</h2>
+            <p>
+              Submit claims for defective devices purchased through authorised
+              retailers. Have proof of purchase ready.
+            </p>
+            <a class="link-btn" href="verify.html">Start Verification</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <article class="content-card" id="contact-form">
+          <img
+            src="assets/banner-verify.svg"
+            alt="Placeholder illustration for Lost Mary support ticket submission"
+            loading="lazy"
+          />
+          <h2>Submit a Support Ticket</h2>
+          <p>
+            Provide as much detail as possible so we can troubleshoot quickly.
+            Our team will reply via email within 24 hours.
+          </p>
+          <form class="support-form">
+            <div>
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" />
+            </div>
+            <div>
+              <label for="email">Email Address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <div>
+              <label for="topic">Support Topic</label>
+              <select id="topic" name="topic">
+                <option value="device">Device Guidance</option>
+                <option value="verification">Verification</option>
+                <option value="warranty">Warranty Claim</option>
+                <option value="retail">Retail Partner</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="How can we help?"
+              ></textarea>
+            </div>
+            <button class="btn solid" type="submit">Send Request</button>
+          </form>
+        </article>
+      </section>
+
+      <section class="section-shell">
+        <article class="content-card">
+          <img
+            src="assets/banner-planet.svg"
+            alt="Placeholder illustration for Lost Mary frequently asked questions"
+            loading="lazy"
+          />
+          <h2>Frequently Asked</h2>
+          <div class="faq-list">
+            <details>
+              <summary>How do I verify my Lost Mary device?</summary>
+              <p>
+                Locate the verification code on your packaging and submit it on
+                our <a href="verify.html">verification page</a>. You&rsquo;ll
+                receive confirmation instantly.
+              </p>
+            </details>
+            <details>
+              <summary>What should I do if my device tastes burnt?</summary>
+              <p>
+                Stop usage immediately and contact support with your batch code.
+                We&rsquo;ll help troubleshoot or initiate a replacement if
+                needed.
+              </p>
+            </details>
+            <details>
+              <summary>Can I purchase Lost Mary devices online?</summary>
+              <p>
+                Availability varies by region. Use our
+                <a href="find-store.html">store locator</a> to find authorised
+                retailers near you.
+              </p>
+            </details>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="warning">
+          <strong>Warning:</strong> This product contains nicotine. Nicotine is
+          an addictive chemical.
+        </div>
+        <div class="customer-service">
+          <h3>Customer Service</h3>
+          <ul>
+            <li>UK: +44 808 168 9466 (Mon-Fri, 9am - 6pm GMT)</li>
+            <li>DE: +49 30 544 48333 (Mon-Fri, 9am - 6pm CET)</li>
+          </ul>
+        </div>
+        <div class="footer-links" id="verify">
+          <a href="products.html">Products</a>
+          <a href="about.html">About Us</a>
+          <a href="technology.html">Technology</a>
+          <a href="planet.html">Planet</a>
+          <a href="support.html">Support</a>
+          <a href="verify.html">Verify</a>
+          <a href="find-store.html">Find a Store</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="cookies.html">Cookies Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          Copyright &copy; 2025 Lost Mary. All rights reserved. | This site is a
+          fan-made clone for educational purposes.
+        </p>
+        <button class="btn ghost back-to-top" type="button">
+          Back to top
+        </button>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
