@@ -1,44 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Verify Lost Mary Device | Clone</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Verify Lost Mary Device® | Authenticity Check</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&family=Poppins:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Orbitron:wght@500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body data-page="verify">
-    <div class="announcement">
+  <body data-page="verify" class="no-js">
+    <div class="lm-banner">
       <p>
-        Products with characterizing flavors are not for sale in California and
-        are not available for purchase or shipment to consumers in California.
+        Products with characterizing flavors are not for sale in California and are not available for purchase or shipment to consumers in California.
       </p>
     </div>
 
-    <header class="site-header">
-      <div class="brand">
-        <button
-          id="menuToggle"
-          class="menu-toggle"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-        >
+    <header class="lm-header" data-sticky>
+      <div class="header-inner">
+        <a class="lm-logo" href="index.html" aria-label="Lost Mary home">
+          <span>LOST</span><span>MARY</span>
+        </a>
+        <nav class="lm-nav" aria-label="Primary navigation">
+          <a href="index.html" data-page="index">Home</a>
+          <a href="about.html" data-page="about">About</a>
+          <a href="products.html" data-page="products">Products</a>
+          <a href="technology.html" data-page="technology">Technology</a>
+          <a href="planet.html" data-page="planet">Planet</a>
+          <a href="support.html" data-page="support">Support</a>
+          <a href="verify.html" data-page="verify">Verify</a>
+          <a href="find-store.html" data-page="find-store">Find a Store</a>
+        </nav>
+        <div class="header-cta">
+          <a class="lm-btn ghost" href="support.html">Need Help?</a>
+        </div>
+        <button id="menuToggle" class="burger" aria-label="Toggle navigation" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <a href="index.html" class="logo" aria-label="Lost Mary home"
-          >LOST MARY</a
-        >
       </div>
-      <nav class="main-nav" aria-label="Primary">
+      <nav class="lm-drawer" aria-label="Mobile navigation">
+        <a href="index.html" data-page="index">Home</a>
+        <a href="about.html" data-page="about">About</a>
         <a href="products.html" data-page="products">Products</a>
-        <a href="about.html" data-page="about">About Us</a>
         <a href="technology.html" data-page="technology">Technology</a>
         <a href="planet.html" data-page="planet">Planet</a>
         <a href="blogs.html" data-page="blogs">Blogs</a>
@@ -46,151 +55,123 @@
         <a href="verify.html" data-page="verify">Verify</a>
         <a href="find-store.html" data-page="find-store">Find a Store</a>
       </nav>
-      <div class="header-cta">
-        <a class="btn ghost" href="support.html">Need Help?</a>
-        <a class="btn solid" href="find-store.html">Find a Store</a>
-      </div>
     </header>
 
     <main>
-      <section class="page-header">
-        <p class="eyebrow">Verification</p>
-        <h1>Confirm Your Lost Mary Device Authenticity</h1>
-        <p>
-          Enter the security code from your packaging to ensure your Lost Mary
-          is genuine. Authentic devices carry full support and warranty
-          coverage.
-        </p>
-        <div class="hero-actions">
-          <a class="btn solid" href="#verify-form">Start Verification</a>
-          <a class="btn ghost" href="support.html">Contact Support</a>
+      <section class="sub-hero verify-hero scroll-animate-fade">
+        <div class="sub-hero__overlay"></div>
+        <div class="sub-hero__inner">
+          <div class="sub-hero__copy">
+            <span>Verification</span>
+            <h1>Confirm Your Lost Mary Device Authenticity</h1>
+            <p>
+              Enter the security code from your packaging to ensure your Lost Mary is genuine. Authentic devices carry full support and warranty coverage.
+            </p>
+            <div class="hero-actions">
+              <a class="lm-btn solid" href="#verify-form">Start Verification</a>
+              <a class="lm-btn outline" href="support.html">Contact Support</a>
+            </div>
+          </div>
+          <div class="sub-hero__visual">
+            <div class="device-ring device-ring--lg"></div>
+            <div class="device-ring device-ring--sm"></div>
+            <div class="verify-visual"></div>
+          </div>
         </div>
       </section>
 
-      <section class="page-visual">
-        <img
-          src="assets/banner-verify.svg"
-          alt="Stylised placeholder artwork for Lost Mary verification"
-          loading="lazy"
-        />
+      <section class="content-section scroll-animate-scale">
+        <div class="content-columns">
+          <article id="verify-form">
+            <h2>Step 1: Locate Your Code</h2>
+            <p>
+              Find the scratch-off label on your Lost Mary packaging. Carefully reveal the 16-digit code.
+            </p>
+            <form class="support-form">
+              <div>
+                <label for="serial">Enter 16-Digit Code</label>
+                <input
+                  id="serial"
+                  name="serial"
+                  type="text"
+                  placeholder="XXXX-XXXX-XXXX-XXXX"
+                  maxlength="19"
+                />
+              </div>
+              <div>
+                <label for="batch">Batch Number (Optional)</label>
+                <input
+                  id="batch"
+                  name="batch"
+                  type="text"
+                  placeholder="Batch code"
+                />
+              </div>
+              <button class="lm-btn solid" type="submit">Verify Device</button>
+            </form>
+          </article>
+        </div>
       </section>
 
-      <section class="section-shell">
-        <article class="content-card" id="verify-form">
-          <img
-            src="assets/product-mt15000.svg"
-            alt="Placeholder showing verification code entry"
-            loading="lazy"
-          />
-          <h2>Step 1: Locate Your Code</h2>
-          <p>
-            Find the scratch-off label on your Lost Mary packaging. Carefully
-            reveal the 16-digit code.
-          </p>
-          <form class="support-form">
-            <div>
-              <label for="serial">Enter 16-Digit Code</label>
-              <input
-                id="serial"
-                name="serial"
-                type="text"
-                placeholder="XXXX-XXXX-XXXX-XXXX"
-                maxlength="19"
-              />
+      <section class="content-section scroll-animate">
+        <div class="content-columns">
+          <article>
+            <h2>Step 2: Check Device &amp; Packaging</h2>
+            <ul class="feature-list">
+              <li>Inspect the device finish for clean gradients and smooth edges.</li>
+              <li>Ensure the mouthpiece is sealed and free from residue.</li>
+              <li>Confirm anti-counterfeit holograms match the packaging design.</li>
+              <li>Visit our <a href="products.html">product gallery</a> to compare.</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Step 3: Submit Issues</h2>
+            <p>
+              If any detail feels off or the code fails to verify, report it right away. Our team investigates all claims to keep the community safe.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+              <a class="lm-btn solid" href="support.html">Report a Concern</a>
+              <a class="lm-btn ghost" href="find-store.html">Authorised Retailers</a>
             </div>
-            <div>
-              <label for="batch">Batch Number (Optional)</label>
-              <input
-                id="batch"
-                name="batch"
-                type="text"
-                placeholder="Batch code"
-              />
-            </div>
-            <button class="btn solid" type="submit">Verify Device</button>
-          </form>
-        </article>
-      </section>
-
-      <section class="section-shell">
-        <article class="content-card">
-          <img
-            src="assets/product-bm6000.svg"
-            alt="Placeholder depicting device and packaging inspection"
-            loading="lazy"
-          />
-          <h2>Step 2: Check Device &amp; Packaging</h2>
-          <ul>
-            <li>Inspect the device finish for clean gradients and smooth edges.</li>
-            <li>Ensure the mouthpiece is sealed and free from residue.</li>
-            <li>
-              Confirm anti-counterfeit holograms match the packaging design.
-            </li>
-            <li>
-              Visit our <a href="products.html">product gallery</a> to compare.
-            </li>
-          </ul>
-        </article>
-      </section>
-
-      <section class="section-shell">
-        <article class="content-card">
-          <img
-            src="assets/banner-support.svg"
-            alt="Placeholder representing reporting an authenticity concern"
-            loading="lazy"
-          />
-          <h2>Step 3: Submit Issues</h2>
-          <p>
-            If any detail feels off or the code fails to verify, report it right
-            away. Our team investigates all claims to keep the community safe.
-          </p>
-          <div class="contact-actions">
-            <a class="btn solid" href="support.html">Report a Concern</a>
-            <a class="btn ghost" href="find-store.html">Authorised Retailers</a>
-          </div>
-        </article>
+          </article>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="lm-footer">
       <div class="footer-top">
-        <div class="warning">
-          <strong>Warning:</strong> This product contains nicotine. Nicotine is
-          an addictive chemical.
+        <div class="footer-warning">
+          <strong>Warning:</strong> This product contains nicotine. Nicotine is an addictive chemical.
         </div>
-        <div class="customer-service">
-          <h3>Customer Service</h3>
+        <div>
+          <h4>Customer Service</h4>
           <ul>
             <li>UK: +44 808 168 9466 (Mon-Fri, 9am - 6pm GMT)</li>
             <li>DE: +49 30 544 48333 (Mon-Fri, 9am - 6pm CET)</li>
           </ul>
         </div>
-        <div class="footer-links" id="verify">
+        <div class="footer-links">
           <a href="products.html">Products</a>
-          <a href="about.html">About Us</a>
           <a href="technology.html">Technology</a>
           <a href="planet.html">Planet</a>
           <a href="support.html">Support</a>
           <a href="verify.html">Verify</a>
           <a href="find-store.html">Find a Store</a>
+        </div>
+        <div class="footer-links">
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms &amp; Conditions</a>
           <a href="cookies.html">Cookies Policy</a>
+          <a href="blogs.html">News &amp; Updates</a>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <p>
-          Copyright &copy; 2025 Lost Mary. All rights reserved. | This site is a
-          fan-made clone for educational purposes.
-        </p>
-        <button class="btn ghost back-to-top" type="button">
-          Back to top
-        </button>
+        <p>© 2025 LOST MARY. All rights reserved.</p>
+        <button class="lm-btn ghost back-to-top" type="button">Back to top</button>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>
-

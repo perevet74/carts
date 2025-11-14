@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout | Lost Mary®</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Orbitron:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="checkout">
+    <div class="lm-banner">
+      <p>
+        Products with characterizing flavors are not for sale in California and are not available for purchase or shipment to consumers in California.
+      </p>
+    </div>
+
+    <header class="lm-header" data-sticky>
+      <div class="header-inner">
+        <a class="lm-logo" href="index.html" aria-label="Lost Mary home">
+          <span>LOST</span><span>MARY</span>
+        </a>
+        <nav class="lm-nav" aria-label="Primary navigation">
+          <a href="index.html" data-page="index">Home</a>
+          <a href="about.html" data-page="about">About</a>
+          <a href="products.html" data-page="products">Products</a>
+          <a href="technology.html" data-page="technology">Technology</a>
+          <a href="planet.html" data-page="planet">Planet</a>
+          <a href="support.html" data-page="support">Support</a>
+          <a href="verify.html" data-page="verify">Verify</a>
+          <a href="find-store.html" data-page="find-store">Find a Store</a>
+        </nav>
+        <div class="header-cta">
+          <button id="cartToggle" class="cart-toggle" aria-label="Shopping cart">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+            </svg>
+            <span id="cartBadge" class="cart-badge" style="display: none;">0</span>
+          </button>
+          <a class="lm-btn ghost" href="products.html">Continue Shopping</a>
+        </div>
+        <button id="menuToggle" class="burger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="lm-drawer" aria-label="Mobile navigation">
+        <a href="index.html" data-page="index">Home</a>
+        <a href="about.html" data-page="about">About</a>
+        <a href="products.html" data-page="products">Products</a>
+        <a href="technology.html" data-page="technology">Technology</a>
+        <a href="planet.html" data-page="planet">Planet</a>
+        <a href="blogs.html" data-page="blogs">Blogs</a>
+        <a href="support.html" data-page="support">Support</a>
+        <a href="verify.html" data-page="verify">Verify</a>
+        <a href="find-store.html" data-page="find-store">Find a Store</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="checkout-hero">
+        <div class="checkout-hero-inner">
+          <h1>Checkout</h1>
+          <p>Complete your order to get your Lost Mary products delivered</p>
+        </div>
+      </section>
+
+      <section class="checkout-section">
+        <div class="checkout-container">
+          <div class="checkout-main">
+            <form id="checkoutForm" class="checkout-form">
+              <div class="checkout-form-section">
+                <h2>Shipping Information</h2>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+                <div class="form-group">
+                  <label for="address">Street Address *</label>
+                  <input type="text" id="address" name="address" required />
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="city">City *</label>
+                    <input type="text" id="city" name="city" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="state">State/Province *</label>
+                    <input type="text" id="state" name="state" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="zipCode">ZIP/Postal Code *</label>
+                    <input type="text" id="zipCode" name="zipCode" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="country">Country *</label>
+                  <select id="country" name="country" required>
+                    <option value="">Select Country</option>
+                    <option value="US">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="CA">Canada</option>
+                    <option value="AU">Australia</option>
+                    <option value="DE">Germany</option>
+                    <option value="FR">France</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="checkout-form-section">
+                <h2>Payment Information</h2>
+                <div class="form-group">
+                  <label for="cardName">Name on Card *</label>
+                  <input type="text" id="cardName" name="cardName" required />
+                </div>
+                <div class="form-group">
+                  <label for="cardNumber">Card Number *</label>
+                  <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required />
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="expiryDate">Expiry Date *</label>
+                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="cvv">CVV *</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4" required />
+                  </div>
+                </div>
+              </div>
+
+              <div class="checkout-form-section">
+                <h2>Order Notes</h2>
+                <div class="form-group">
+                  <label for="orderNotes">Special Instructions (Optional)</label>
+                  <textarea id="orderNotes" name="orderNotes" rows="4" placeholder="Any special delivery instructions..."></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="lm-btn solid checkout-submit">Place Order</button>
+            </form>
+          </div>
+
+          <div class="checkout-sidebar">
+            <div class="checkout-summary">
+              <h2>Order Summary</h2>
+              <div id="cartItems" class="checkout-cart-items"></div>
+              <div id="cartSummary" class="cart-summary"></div>
+              <div class="checkout-security">
+                <p>🔒 Secure checkout powered by SSL encryption</p>
+                <p>Your payment information is safe and secure</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="lm-footer">
+      <div class="footer-top">
+        <div class="footer-warning">
+          <strong>Warning:</strong> This product contains nicotine. Nicotine is an addictive chemical.
+        </div>
+        <div>
+          <h4>Customer Service</h4>
+          <ul>
+            <li>UK: +44 808 168 9466 (Mon-Fri, 9am - 6pm GMT)</li>
+            <li>DE: +49 30 544 48333 (Mon-Fri, 9am - 6pm CET)</li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <a href="products.html">Products</a>
+          <a href="technology.html">Technology</a>
+          <a href="planet.html">Planet</a>
+          <a href="support.html">Support</a>
+          <a href="verify.html">Verify</a>
+          <a href="find-store.html">Find a Store</a>
+        </div>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="cookies.html">Cookies Policy</a>
+          <a href="blogs.html">News &amp; Updates</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 LOST MARY. All rights reserved.</p>
+        <button class="lm-btn ghost back-to-top" type="button">Back to top</button>
+      </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cartOverlay" class="cart-overlay"></div>
+    <div id="cartSidebar" class="cart-sidebar">
+      <div class="cart-sidebar-header">
+        <h2>Shopping Cart</h2>
+        <button id="cartClose" class="cart-close" aria-label="Close cart">×</button>
+      </div>
+      <div id="cartItemsList" class="cart-items-list"></div>
+      <div class="cart-sidebar-footer">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+        <a href="checkout.html" class="lm-btn solid" style="width: 100%; margin-top: 1rem;">Checkout</a>
+        <a href="products.html" class="lm-btn outline" style="width: 100%; margin-top: 0.5rem;">Continue Shopping</a>
+      </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+    <script>
+      // Checkout form handling
+      document.getElementById('checkoutForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const cart = JSON.parse(localStorage.getItem('lostMaryCart')) || [];
+        if (cart.length === 0) {
+          alert('Your cart is empty. Please add items to your cart before checkout.');
+          window.location.href = 'products.html';
+          return;
+        }
+        
+        // In a real application, this would send data to a server
+        alert('Thank you for your order! Your order has been received and will be processed shortly.');
+        localStorage.removeItem('lostMaryCart');
+        window.location.href = 'index.html';
+      });
+
+      // Format card number
+      document.getElementById('cardNumber')?.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\s/g, '');
+        let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+        e.target.value = formattedValue;
+      });
+
+      // Format expiry date
+      document.getElementById('expiryDate')?.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length >= 2) {
+          value = value.substring(0, 2) + '/' + value.substring(2, 4);
+        }
+        e.target.value = value;
+      });
+    </script>
+  </body>
+</html>
+

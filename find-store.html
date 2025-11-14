@@ -55,113 +55,229 @@
     <main>
       <section class="page-header">
         <p class="eyebrow">Store Locator</p>
-        <h1>Locate Lost Mary Retailers Near You</h1>
+        <h1>Find Lost Mary Retailers Near You</h1>
         <p>
-          Use our curated directory to find authorised Lost Mary retailers for
-          genuine products, new releases, and in-store experiences.
+          Discover authorised Lost Mary retailers worldwide. Browse flagship stores, partner locations, and verified stockists for genuine products and exclusive releases.
         </p>
-        <div class="hero-actions">
-          <a class="btn solid" href="#locator">Search Directory</a>
-          <a class="btn ghost" href="support.html">Become a Retailer</a>
+      </section>
+
+      <section class="store-locator-hero" id="locator">
+        <div class="locator-search-wrapper">
+          <div class="search-box">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="m19 19-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <input
+              type="text"
+              id="storeSearch"
+              placeholder="Search by city, country, or store name..."
+              autocomplete="off"
+            />
+            <button type="button" class="search-clear" aria-label="Clear search" style="display: none;">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M12 4L4 12M4 4l8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <div class="region-filters">
+            <button class="filter-btn active" data-region="all">All Regions</button>
+            <button class="filter-btn" data-region="uk">UK</button>
+            <button class="filter-btn" data-region="eu">Europe</button>
+            <button class="filter-btn" data-region="us">North America</button>
+            <button class="filter-btn" data-region="asia">Asia Pacific</button>
+            <button class="filter-btn" data-region="other">Other</button>
+          </div>
         </div>
       </section>
 
-      <section class="page-visual">
-        <img
-          src="assets/banner-find-store.svg"
-          alt="Stylised placeholder artwork for Lost Mary store locator"
-          loading="lazy"
-        />
-      </section>
-
-      <section class="section-shell" id="locator">
-        <article class="content-card">
-          <img
-            src="assets/banner-products.svg"
-            alt="Placeholder illustration describing how to use the store locator"
-            loading="lazy"
-          />
-          <h2>How to Use the Locator</h2>
-          <ul>
-            <li>Select your region for a curated list of partner retailers.</li>
-            <li>
-              Call ahead to confirm stock availability for limited releases.
-            </li>
-            <li>
-              Bring your verification code to confirm authenticity at purchase.
-            </li>
-          </ul>
-        </article>
-      </section>
-
       <section class="section-shell wide">
-        <div class="store-grid">
-          <article class="store-card">
-            <img
-              src="assets/product-mt15000.svg"
-              alt="Placeholder orientation for United Kingdom flagship store"
-              loading="lazy"
-            />
-            <h3>United Kingdom</h3>
-            <p>Lost Mary Flagship &mdash; London</p>
-            <p>Open daily · 10am - 8pm</p>
-            <a class="link-btn" href="#">View on Maps</a>
+        <div class="store-stats">
+          <span class="stat-item">
+            <strong id="storeCount">6</strong> stores found
+          </span>
+          <span class="stat-item">
+            <strong>50+</strong> countries
+          </span>
+          <span class="stat-item">
+            <strong>24/7</strong> online support
+          </span>
+        </div>
+
+        <div class="store-grid" id="storeGrid">
+          <article class="store-card" data-region="uk" data-name="Lost Mary Flagship London" data-city="London" data-country="United Kingdom">
+            <div class="store-image">
+              <div class="store-badge">Flagship</div>
+            </div>
+            <div class="store-info">
+              <h3>Lost Mary Flagship</h3>
+              <p class="store-location">
+                <svg class="location-icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 0C3.13 0 0 3.13 0 7c0 5.25 7 14 7 14s7-8.75 7-14c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S5.62 4.5 7 4.5 9.5 5.62 9.5 7 8.38 9.5 7 9.5z" fill="currentColor"/>
+                </svg>
+                London, United Kingdom
+              </p>
+              <div class="store-details">
+                <p class="store-hours">Open daily · 10am - 8pm</p>
+                <p class="store-phone">+44 20 7123 4567</p>
+              </div>
+              <div class="store-features">
+                <span class="feature-tag">New Releases</span>
+                <span class="feature-tag">In-Store Events</span>
+                <span class="feature-tag">Expert Staff</span>
+              </div>
+              <div class="store-actions">
+                <a class="btn solid small" href="#" target="_blank">Get Directions</a>
+                <a class="btn ghost small" href="tel:+442071234567">Call Store</a>
+              </div>
+            </div>
           </article>
-          <article class="store-card">
-            <img
-              src="assets/product-bm6000.svg"
-              alt="Placeholder orientation for Germany collective store"
-              loading="lazy"
-            />
-            <h3>Germany</h3>
-            <p>Mary Collective &mdash; Berlin</p>
-            <p>Mon - Sat · 10am - 7pm</p>
-            <a class="link-btn" href="#">View on Maps</a>
+
+          <article class="store-card" data-region="eu" data-name="Mary Collective Berlin" data-city="Berlin" data-country="Germany">
+            <div class="store-image">
+              <div class="store-badge">Partner</div>
+            </div>
+            <div class="store-info">
+              <h3>Mary Collective</h3>
+              <p class="store-location">
+                <svg class="location-icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 0C3.13 0 0 3.13 0 7c0 5.25 7 14 7 14s7-8.75 7-14c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S5.62 4.5 7 4.5 9.5 5.62 9.5 7 8.38 9.5 7 9.5z" fill="currentColor"/>
+                </svg>
+                Berlin, Germany
+              </p>
+              <div class="store-details">
+                <p class="store-hours">Mon - Sat · 10am - 7pm</p>
+                <p class="store-phone">+49 30 1234 5678</p>
+              </div>
+              <div class="store-features">
+                <span class="feature-tag">Full Range</span>
+                <span class="feature-tag">Verification</span>
+              </div>
+              <div class="store-actions">
+                <a class="btn solid small" href="#" target="_blank">Get Directions</a>
+                <a class="btn ghost small" href="tel:+493012345678">Call Store</a>
+              </div>
+            </div>
           </article>
-          <article class="store-card">
-            <img
-              src="assets/product-bm600-pod.svg"
-              alt="Placeholder orientation for France Maison store"
-              loading="lazy"
-            />
-            <h3>France</h3>
-            <p>Maison Lost Mary &mdash; Paris</p>
-            <p>Tue - Sun · 11am - 8pm</p>
-            <a class="link-btn" href="#">View on Maps</a>
+
+          <article class="store-card" data-region="eu" data-name="Maison Lost Mary Paris" data-city="Paris" data-country="France">
+            <div class="store-image">
+              <div class="store-badge">Premium</div>
+            </div>
+            <div class="store-info">
+              <h3>Maison Lost Mary</h3>
+              <p class="store-location">
+                <svg class="location-icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 0C3.13 0 0 3.13 0 7c0 5.25 7 14 7 14s7-8.75 7-14c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S5.62 4.5 7 4.5 9.5 5.62 9.5 7 8.38 9.5 7 9.5z" fill="currentColor"/>
+                </svg>
+                Paris, France
+              </p>
+              <div class="store-details">
+                <p class="store-hours">Tue - Sun · 11am - 8pm</p>
+                <p class="store-phone">+33 1 23 45 67 89</p>
+              </div>
+              <div class="store-features">
+                <span class="feature-tag">Limited Editions</span>
+                <span class="feature-tag">VIP Access</span>
+                <span class="feature-tag">Tastings</span>
+              </div>
+              <div class="store-actions">
+                <a class="btn solid small" href="#" target="_blank">Get Directions</a>
+                <a class="btn ghost small" href="tel:+33123456789">Call Store</a>
+              </div>
+            </div>
           </article>
-          <article class="store-card">
-            <img
-              src="assets/product-cm15000.svg"
-              alt="Placeholder orientation for United States experience store"
-              loading="lazy"
-            />
-            <h3>United States</h3>
-            <p>LM Experience &mdash; New York</p>
-            <p>Mon - Sat · 11am - 9pm</p>
-            <a class="link-btn" href="#">View on Maps</a>
+
+          <article class="store-card" data-region="us" data-name="LM Experience New York" data-city="New York" data-country="United States">
+            <div class="store-image">
+              <div class="store-badge">Experience</div>
+            </div>
+            <div class="store-info">
+              <h3>LM Experience</h3>
+              <p class="store-location">
+                <svg class="location-icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 0C3.13 0 0 3.13 0 7c0 5.25 7 14 7 14s7-8.75 7-14c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S5.62 4.5 7 4.5 9.5 5.62 9.5 7 8.38 9.5 7 9.5z" fill="currentColor"/>
+                </svg>
+                New York, United States
+              </p>
+              <div class="store-details">
+                <p class="store-hours">Mon - Sat · 11am - 9pm</p>
+                <p class="store-phone">+1 212 555 0123</p>
+              </div>
+              <div class="store-features">
+                <span class="feature-tag">Interactive Displays</span>
+                <span class="feature-tag">Workshops</span>
+              </div>
+              <div class="store-actions">
+                <a class="btn solid small" href="#" target="_blank">Get Directions</a>
+                <a class="btn ghost small" href="tel:+12125550123">Call Store</a>
+              </div>
+            </div>
           </article>
-          <article class="store-card">
-            <img
-              src="assets/product-pt600.svg"
-              alt="Placeholder orientation for UAE Lost Mary Gallery"
-              loading="lazy"
-            />
-            <h3>United Arab Emirates</h3>
-            <p>Lost Mary Gallery &mdash; Dubai</p>
-            <p>Daily · 10am - 10pm</p>
-            <a class="link-btn" href="#">View on Maps</a>
+
+          <article class="store-card" data-region="asia" data-name="Lost Mary Gallery Dubai" data-city="Dubai" data-country="United Arab Emirates">
+            <div class="store-image">
+              <div class="store-badge">Gallery</div>
+            </div>
+            <div class="store-info">
+              <h3>Lost Mary Gallery</h3>
+              <p class="store-location">
+                <svg class="location-icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 0C3.13 0 0 3.13 0 7c0 5.25 7 14 7 14s7-8.75 7-14c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S5.62 4.5 7 4.5 9.5 5.62 9.5 7 8.38 9.5 7 9.5z" fill="currentColor"/>
+                </svg>
+                Dubai, United Arab Emirates
+              </p>
+              <div class="store-details">
+                <p class="store-hours">Daily · 10am - 10pm</p>
+                <p class="store-phone">+971 4 123 4567</p>
+              </div>
+              <div class="store-features">
+                <span class="feature-tag">Luxury Collection</span>
+                <span class="feature-tag">Designer Editions</span>
+              </div>
+              <div class="store-actions">
+                <a class="btn solid small" href="#" target="_blank">Get Directions</a>
+                <a class="btn ghost small" href="tel:+97141234567">Call Store</a>
+              </div>
+            </div>
           </article>
-          <article class="store-card">
-            <img
-              src="assets/product-qm600.svg"
-              alt="Placeholder orientation for Australia Mary Lab"
-              loading="lazy"
-            />
-            <h3>Australia</h3>
-            <p>Mary Lab &mdash; Sydney</p>
-            <p>Mon - Sun · 10am - 7pm</p>
-            <a class="link-btn" href="#">View on Maps</a>
+
+          <article class="store-card" data-region="asia" data-name="Mary Lab Sydney" data-city="Sydney" data-country="Australia">
+            <div class="store-image">
+              <div class="store-badge">Lab</div>
+            </div>
+            <div class="store-info">
+              <h3>Mary Lab</h3>
+              <p class="store-location">
+                <svg class="location-icon" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 0C3.13 0 0 3.13 0 7c0 5.25 7 14 7 14s7-8.75 7-14c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S5.62 4.5 7 4.5 9.5 5.62 9.5 7 8.38 9.5 7 9.5z" fill="currentColor"/>
+                </svg>
+                Sydney, Australia
+              </p>
+              <div class="store-details">
+                <p class="store-hours">Mon - Sun · 10am - 7pm</p>
+                <p class="store-phone">+61 2 9123 4567</p>
+              </div>
+              <div class="store-features">
+                <span class="feature-tag">Testing Lab</span>
+                <span class="feature-tag">Custom Flavors</span>
+                <span class="feature-tag">Tech Support</span>
+              </div>
+              <div class="store-actions">
+                <a class="btn solid small" href="#" target="_blank">Get Directions</a>
+                <a class="btn ghost small" href="tel:+61291234567">Call Store</a>
+              </div>
+            </div>
           </article>
+        </div>
+
+        <div class="no-results" id="noResults" style="display: none;">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" style="opacity: 0.4; margin-bottom: 1.5rem;">
+            <path d="M32 8C18.75 8 8 18.75 8 32s10.75 24 24 24 24-10.75 24-24S45.25 8 32 8zm0 40c-8.84 0-16-7.16-16-16S23.16 16 32 16s16 7.16 16 16-7.16 16-16 16z" fill="currentColor"/>
+            <path d="M40 24L24 40M24 24l16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <h3>No stores found</h3>
+          <p>Try adjusting your search or filter criteria</p>
         </div>
       </section>
 

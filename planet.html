@@ -1,44 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lost Mary Planet | Clone</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lost Mary Planet® | Sustainability &amp; Creative Impact</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&family=Poppins:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Orbitron:wght@500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body data-page="planet">
-    <div class="announcement">
+  <body data-page="planet" class="no-js">
+    <div class="lm-banner">
       <p>
-        Products with characterizing flavors are not for sale in California and
-        are not available for purchase or shipment to consumers in California.
+        Products with characterizing flavors are not for sale in California and are not available for purchase or shipment to consumers in California.
       </p>
     </div>
 
-    <header class="site-header">
-      <div class="brand">
-        <button
-          id="menuToggle"
-          class="menu-toggle"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-        >
+    <header class="lm-header" data-sticky>
+      <div class="header-inner">
+        <a class="lm-logo" href="index.html" aria-label="Lost Mary home">
+          <span>LOST</span><span>MARY</span>
+        </a>
+        <nav class="lm-nav" aria-label="Primary navigation">
+          <a href="index.html" data-page="index">Home</a>
+          <a href="about.html" data-page="about">About</a>
+          <a href="products.html" data-page="products">Products</a>
+          <a href="technology.html" data-page="technology">Technology</a>
+          <a href="planet.html" data-page="planet">Planet</a>
+          <a href="support.html" data-page="support">Support</a>
+          <a href="verify.html" data-page="verify">Verify</a>
+          <a href="find-store.html" data-page="find-store">Find a Store</a>
+        </nav>
+        <div class="header-cta">
+          <a class="lm-btn ghost" href="products.html">Go Beyond</a>
+        </div>
+        <button id="menuToggle" class="burger" aria-label="Toggle navigation" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <a href="index.html" class="logo" aria-label="Lost Mary home"
-          >LOST MARY</a
-        >
       </div>
-      <nav class="main-nav" aria-label="Primary">
+      <nav class="lm-drawer" aria-label="Mobile navigation">
+        <a href="index.html" data-page="index">Home</a>
+        <a href="about.html" data-page="about">About</a>
         <a href="products.html" data-page="products">Products</a>
-        <a href="about.html" data-page="about">About Us</a>
         <a href="technology.html" data-page="technology">Technology</a>
         <a href="planet.html" data-page="planet">Planet</a>
         <a href="blogs.html" data-page="blogs">Blogs</a>
@@ -46,192 +55,175 @@
         <a href="verify.html" data-page="verify">Verify</a>
         <a href="find-store.html" data-page="find-store">Find a Store</a>
       </nav>
-      <div class="header-cta">
-        <a class="btn ghost" href="about.html">Go Beyond</a>
-        <a class="btn solid" href="products.html">View Products</a>
-      </div>
     </header>
 
     <main>
-      <section class="page-header">
-        <p class="eyebrow">Planet Wonderland</p>
-        <h1>Designing Sustainably, Celebrating Creativity</h1>
-        <p>
-          Lost Mary&rsquo;s Planet initiatives champion circular materials,
-          responsible sourcing, and immersive experiences that spotlight
-          creativity alongside accountability.
-        </p>
-        <div class="hero-actions">
-          <a class="btn solid" href="support.html">Partner With Us</a>
-          <a class="btn ghost" href="blogs.html">View Planet Stories</a>
+      <section class="sub-hero planet-hero scroll-animate-fade">
+        <div class="sub-hero__overlay"></div>
+        <div class="sub-hero__inner">
+          <div class="sub-hero__copy">
+            <span>Planet Wonderland</span>
+            <h1>Designing Sustainably, Celebrating Creativity</h1>
+            <p>
+              Lost Mary's Planet initiatives champion circular materials, responsible sourcing, and immersive experiences that spotlight creativity alongside accountability.
+            </p>
+            <div class="hero-actions">
+              <a class="lm-btn solid" href="support.html">Partner With Us</a>
+              <a class="lm-btn outline" href="blogs.html">View Planet Stories</a>
+            </div>
+          </div>
+          <div class="sub-hero__visual">
+            <div class="device-ring device-ring--lg"></div>
+            <div class="device-ring device-ring--sm"></div>
+            <div class="planet-visual"></div>
+          </div>
         </div>
       </section>
 
-      <section class="page-visual">
-        <img
-          src="assets/banner-planet.svg"
-          alt="Stylised placeholder artwork showcasing Lost Mary Planet experiences"
-          loading="lazy"
-        />
+      <section class="content-section scroll-animate">
+        <div class="content-columns">
+          <article>
+            <h2>Planet Wonderland Experiences</h2>
+            <p>
+              Our travelling installations showcase recyclable materials, interactive art, and educational pop-ups that bring the Lost Mary universe to life.
+            </p>
+            <p>
+              Walk through flavour-inspired landscapes featuring recycled textiles, kinetic lighting, and augmented visuals. Explore prototypes made with bio-based polymers, aluminium, and recycled plastics sourced through partner programs.
+            </p>
+          </article>
+          <article>
+            <h2>Community Workshops</h2>
+            <p>
+              Local artists and sustainability leaders co-host sessions on repurposing devices and creative upcycling. These immersive zones blend education with hands-on creativity.
+            </p>
+            <p>
+              Material labs showcase our commitment to circular design, demonstrating how Lost Mary devices can be transformed into art pieces and functional objects.
+            </p>
+          </article>
+        </div>
       </section>
 
-      <section class="section-shell">
-        <article class="content-card">
-          <img
-            src="assets/banner-products.svg"
-            alt="Placeholder illustration of Planet Wonderland installations"
-            loading="lazy"
-          />
-          <h2>Planet Wonderland Experiences</h2>
+      <section class="dual-highlight scroll-animate-scale">
+        <article class="highlight-card">
+          <div class="highlight-copy">
+            <span>Impact Dashboard</span>
+            <h3>Our Sustainability Metrics</h3>
+            <div class="stat-grid-inline">
+              <div class="stat-item-inline">
+                <strong>68%</strong>
+                <span>recycled packaging</span>
+              </div>
+              <div class="stat-item-inline">
+                <strong>120+</strong>
+                <span>city exhibitions</span>
+              </div>
+              <div class="stat-item-inline">
+                <strong>35%</strong>
+                <span>energy reduction</span>
+              </div>
+              <div class="stat-item-inline">
+                <strong>500k</strong>
+                <span>devices collected</span>
+              </div>
+            </div>
+          </div>
+          <div class="highlight-visual highlight-impact"></div>
+        </article>
+      </section>
+
+      <section class="content-section scroll-animate">
+        <div class="content-columns">
+          <article>
+            <h2>Sustainable Design Actions</h2>
+            <ul class="feature-list">
+              <li>
+                Transitioning to FSC-certified paper and soy-based inks across all packaging.
+              </li>
+              <li>
+                Implementing regional take-back programs to responsibly recycle disposed devices.
+              </li>
+              <li>
+                Partnering with artists to upcycle components into limited edition art pieces.
+              </li>
+              <li>
+                Funding environmental non-profits through the Lost Mary Planet grant program.
+              </li>
+            </ul>
+          </article>
+          <article>
+            <h2>Creative Collaborations</h2>
+            <p>
+              Lost Mary Planet bridges technology and art, working with emerging creators to transform device components into sculptures, installations, and functional design objects.
+            </p>
+            <p>
+              Our grant program supports artists who explore themes of sustainability, circularity, and responsible consumption through their work.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="grid-panels scroll-animate-slide-left">
+        <article class="panel">
+          <span>Get Involved</span>
+          <h3>Partner With Us</h3>
           <p>
-            Our travelling installations showcase recyclable materials,
-            interactive art, and educational pop-ups that bring the Lost Mary
-            universe to life.
+            Have a sustainability initiative or creative collaboration in mind? We'd love to hear from you. Submit concepts or request details on our recycling programs.
           </p>
-          <div class="split-grid">
-            <div>
-              <h3>Immersive Zones</h3>
-              <p>
-                Walk through flavour-inspired landscapes featuring recycled
-                textiles, kinetic lighting, and augmented visuals.
-              </p>
-            </div>
-            <div>
-              <h3>Material Labs</h3>
-              <p>
-                Explore prototypes made with bio-based polymers, aluminium, and
-                recycled plastics sourced through partner programs.
-              </p>
-            </div>
-            <div>
-              <h3>Community Workshops</h3>
-              <p>
-                Local artists and sustainability leaders co-host sessions on
-                repurposing devices and creative upcycling.
-              </p>
-            </div>
-          </div>
+          <a class="lm-link" href="support.html">Contact Sustainability</a>
         </article>
-      </section>
-
-      <section class="section-shell">
-        <article class="content-card">
-          <img
-            src="assets/banner-privacy.svg"
-            alt="Placeholder illustration of Lost Mary impact dashboard"
-            loading="lazy"
-          />
-          <h2>Impact Dashboard</h2>
-          <div class="stat-grid">
-            <div class="stat-card">
-              <strong>68%</strong>
-              <span>recycled packaging</span>
-            </div>
-            <div class="stat-card">
-              <strong>120+</strong>
-              <span>city exhibitions</span>
-            </div>
-            <div class="stat-card">
-              <strong>35%</strong>
-              <span>energy reduction</span>
-            </div>
-            <div class="stat-card">
-              <strong>500k</strong>
-              <span>devices collected</span>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section class="section-shell">
-        <article class="content-card">
-          <img
-            src="assets/banner-support.svg"
-            alt="Placeholder illustration of Lost Mary sustainability actions"
-            loading="lazy"
-          />
-          <h2>Sustainable Design Actions</h2>
-          <ul>
-            <li>
-              Transitioning to FSC-certified paper and soy-based inks across all
-              packaging.
-            </li>
-            <li>
-              Implementing regional take-back programs to responsibly recycle
-              disposed devices.
-            </li>
-            <li>
-              Partnering with artists to upcycle components into limited edition
-              art pieces.
-            </li>
-            <li>
-              Funding environmental non-profits through the Lost Mary Planet
-              grant program.
-            </li>
-          </ul>
-        </article>
-      </section>
-
-      <section class="section-shell">
-        <article class="content-card">
-          <img
-            src="assets/banner-blogs.svg"
-            alt="Placeholder illustration encouraging involvement with Lost Mary Planet"
-            loading="lazy"
-          />
-          <h2>Get Involved</h2>
+        <article class="panel">
+          <span>Stories</span>
+          <h3>Impact Stories</h3>
           <p>
-            Have a sustainability initiative or creative collaboration in mind?
-            We&rsquo;d love to hear from you. Submit concepts or request details
-            on our recycling programs.
+            Read about our Planet Wonderland exhibitions, artist collaborations, and community initiatives that are making a difference.
           </p>
-          <div class="contact-actions">
-            <a class="btn solid" href="support.html">Contact Sustainability</a>
-            <a class="btn ghost" href="blogs.html">Read Impact Stories</a>
-            <a class="link-btn" href="verify.html">Verify Your Device</a>
-          </div>
+          <a class="lm-link" href="blogs.html">Read Impact Stories</a>
+        </article>
+        <article class="panel">
+          <span>Verification</span>
+          <h3>Verify Your Device</h3>
+          <p>
+            Authentic Lost Mary devices support our sustainability programs. Verify your device to access warranty support and recycling options.
+          </p>
+          <a class="lm-link" href="verify.html">Verify Your Device</a>
         </article>
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="lm-footer">
       <div class="footer-top">
-        <div class="warning">
-          <strong>Warning:</strong> This product contains nicotine. Nicotine is
-          an addictive chemical.
+        <div class="footer-warning">
+          <strong>Warning:</strong> This product contains nicotine. Nicotine is an addictive chemical.
         </div>
-        <div class="customer-service">
-          <h3>Customer Service</h3>
+        <div>
+          <h4>Customer Service</h4>
           <ul>
             <li>UK: +44 808 168 9466 (Mon-Fri, 9am - 6pm GMT)</li>
             <li>DE: +49 30 544 48333 (Mon-Fri, 9am - 6pm CET)</li>
           </ul>
         </div>
-        <div class="footer-links" id="verify">
+        <div class="footer-links">
           <a href="products.html">Products</a>
-          <a href="about.html">About Us</a>
           <a href="technology.html">Technology</a>
           <a href="planet.html">Planet</a>
           <a href="support.html">Support</a>
           <a href="verify.html">Verify</a>
           <a href="find-store.html">Find a Store</a>
+        </div>
+        <div class="footer-links">
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms &amp; Conditions</a>
           <a href="cookies.html">Cookies Policy</a>
+          <a href="blogs.html">News &amp; Updates</a>
         </div>
       </div>
+
       <div class="footer-bottom">
-        <p>
-          Copyright &copy; 2025 Lost Mary. All rights reserved. | This site is a
-          fan-made clone for educational purposes.
-        </p>
-        <button class="btn ghost back-to-top" type="button">
-          Back to top
-        </button>
+        <p>© 2025 LOST MARY. All rights reserved.</p>
+        <button class="lm-btn ghost back-to-top" type="button">Back to top</button>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>
-

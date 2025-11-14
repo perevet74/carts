@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body data-page="index">
+  <body data-page="index" class="no-js">
     <div class="lm-banner">
       <p>
         Products with characterizing flavors are not for sale in California and are not available for purchase or shipment to consumers in California.
@@ -38,8 +38,13 @@
         </nav>
 
         <div class="header-cta">
+          <button id="cartToggle" class="cart-toggle" aria-label="Shopping cart">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+            </svg>
+            <span id="cartBadge" class="cart-badge" style="display: none;">0</span>
+          </button>
           <a class="lm-btn ghost" href="products.html">Go Beyond</a>
-          <a class="lm-btn solid" href="find-store.html">Find a Store</a>
         </div>
 
         <button id="menuToggle" class="burger" aria-label="Toggle navigation" aria-expanded="false">
@@ -102,7 +107,7 @@
         </div>
       </section>
 
-      <section class="brand-ticker" aria-label="Powered by Lost Mary">
+      <section class="brand-ticker scroll-animate-fade" aria-label="Powered by Lost Mary">
         <div class="ticker-track">
           <span>Powered by lost mary</span>
           <span>Go turbo</span>
@@ -119,7 +124,7 @@
         </div>
       </section>
 
-      <section class="product-showcase">
+      <section class="product-showcase scroll-animate">
         <header class="section-header">
           <span>Our Products</span>
           <h2>Top Sellers &amp; Limited Collections</h2>
@@ -128,7 +133,7 @@
           </p>
         </header>
 
-        <div class="showcase-wrapper">
+          <div class="showcase-wrapper">
           <div class="showcase-track" id="productTrack" aria-live="polite"></div>
           <div class="showcase-nav">
             <button class="nav-btn prev" type="button" aria-label="Previous devices"></button>
@@ -137,10 +142,33 @@
         </div>
 
         <div class="showcase-dots" id="productDots" role="tablist" aria-label="Device slides"></div>
+        
+        <!-- Product Detail Modal -->
+        <div id="productModal" class="product-modal">
+          <div class="product-modal-content"></div>
+        </div>
+
+        <!-- Cart Sidebar -->
+        <div id="cartOverlay" class="cart-overlay"></div>
+        <div id="cartSidebar" class="cart-sidebar">
+          <div class="cart-sidebar-header">
+            <h2>Shopping Cart</h2>
+            <button id="cartClose" class="cart-close" aria-label="Close cart">×</button>
+          </div>
+          <div id="cartItemsList" class="cart-items-list"></div>
+          <div class="cart-sidebar-footer">
+            <div class="cart-total">
+              <span>Total:</span>
+              <span id="cartTotal">$0.00</span>
+            </div>
+            <a href="checkout.html" class="lm-btn solid" style="width: 100%; margin-top: 1rem;">Checkout</a>
+            <a href="products.html" class="lm-btn outline" style="width: 100%; margin-top: 0.5rem;">Continue Shopping</a>
+          </div>
+        </div>
       </section>
 
       <section class="dual-highlight">
-        <article class="highlight-card">
+        <article class="highlight-card scroll-animate-slide-left">
           <div class="highlight-copy">
             <span>Go Beyond</span>
             <h3>4in1 Turbo Platform</h3>
@@ -152,7 +180,7 @@
           <div class="highlight-visual highlight-4in1"></div>
         </article>
 
-        <article class="highlight-card dark">
+        <article class="highlight-card dark scroll-animate-slide-right">
           <div class="highlight-copy">
             <span>Technology</span>
             <h3>QUAQ Mesh 2.0</h3>
@@ -165,7 +193,7 @@
         </article>
       </section>
 
-      <section class="grid-panels">
+      <section class="grid-panels scroll-animate">
         <article class="panel">
           <span>Planet Wonderland</span>
           <h3>Immersive Pop-up Exhibition</h3>
@@ -204,7 +232,7 @@
         </article>
       </section>
 
-      <section class="cta-strip">
+      <section class="cta-strip scroll-animate-scale">
         <div class="cta-copy">
           <span>Life&#39;s Merry</span>
           <h3>Be first to know about Lost Mary drops.</h3>
