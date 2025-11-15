@@ -1122,10 +1122,16 @@ function toggleDrawer(force) {
 }
 
 function buildProductSlider() {
-  if (!productTrack) return;
+  // Re-query elements in case DOM wasn't ready
+  const currentProductTrack = document.getElementById("productTrack");
+  const currentProductDots = document.getElementById("productDots");
+  
+  if (!currentProductTrack) return;
 
-  productTrack.innerHTML = "";
-  productDots.innerHTML = "";
+  currentProductTrack.innerHTML = "";
+  if (currentProductDots) {
+    currentProductDots.innerHTML = "";
+  }
 
   products.forEach((product, index) => {
     const article = document.createElement("article");
@@ -1139,40 +1145,56 @@ function buildProductSlider() {
         <button class="lm-btn outline" onclick="addToCart('${product.id}')">Add to Cart</button>
       </div>
     `;
-    productTrack.appendChild(article);
+    currentProductTrack.appendChild(article);
 
-    const dot = document.createElement("button");
-    dot.type = "button";
-    dot.setAttribute("role", "tab");
-    dot.setAttribute("aria-label", `${product.name} slide`);
-    dot.dataset.index = index.toString();
-    dot.addEventListener("click", () => goToSlide(index));
-    productDots.appendChild(dot);
+    if (currentProductDots) {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("role", "tab");
+      dot.setAttribute("aria-label", `${product.name} slide`);
+      dot.dataset.index = index.toString();
+      dot.addEventListener("click", () => goToSlide(index));
+      currentProductDots.appendChild(dot);
+    }
   });
 
   goToSlide(0);
 }
 
 function goToSlide(index) {
-  if (!productTrack) return;
-  const cards = productTrack.children;
+  const currentProductTrack = document.getElementById("productTrack");
+  const currentProductDots = document.getElementById("productDots");
+  
+  if (!currentProductTrack) return;
+  const cards = currentProductTrack.children;
   const total = cards.length;
   if (total === 0) return;
   currentSlide = (index + total) % total;
 
   const cardWidth = cards[0].getBoundingClientRect().width;
-  const gap = parseFloat(getComputedStyle(productTrack).columnGap || "20");
+  const gap = parseFloat(getComputedStyle(currentProductTrack).columnGap || "20");
   const offset = currentSlide * (cardWidth + gap);
-  productTrack.scrollTo({ left: offset, behavior: "smooth" });
+  currentProductTrack.scrollTo({ left: offset, behavior: "smooth" });
 
-  [...productDots.children].forEach((dot, i) => {
-    dot.setAttribute("aria-selected", i === currentSlide ? "true" : "false");
-  });
+  if (currentProductDots) {
+    [...currentProductDots.children].forEach((dot, i) => {
+      dot.setAttribute("aria-selected", i === currentSlide ? "true" : "false");
+    });
+  }
 }
 
 function handleNavButtons() {
-  prevBtn?.addEventListener("click", () => goToSlide(currentSlide - 1));
-  nextBtn?.addEventListener("click", () => goToSlide(currentSlide + 1));
+  // Re-query buttons in case DOM wasn't ready
+  const currentPrevBtn = document.querySelector(".product-showcase .nav-btn.prev");
+  const currentNextBtn = document.querySelector(".product-showcase .nav-btn.next");
+  
+  if (currentPrevBtn) {
+    currentPrevBtn.addEventListener("click", () => goToSlide(currentSlide - 1));
+  }
+  
+  if (currentNextBtn) {
+    currentNextBtn.addEventListener("click", () => goToSlide(currentSlide + 1));
+  }
 }
 
 function enhanceHeader() {
@@ -1197,22 +1219,7 @@ function handleBackToTop() {
   });
 }
 
-function initMenuToggle() {
-  menuToggle?.addEventListener("click", () => toggleDrawer());
-  drawer?.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => toggleDrawer(false));
-  });
-}
-
-function init() {
-  markActiveNav();
-  buildProductSlider();
-  handleNavButtons();
-  enhanceHeader();
-  handleBackToTop();
-  initMenuToggle();
-  initStoreLocator();
-}
+// Removed duplicate init function - using the one below
 
 // Store Locator Functionality
 function initStoreLocator() {
@@ -1601,21 +1608,60 @@ function initCart() {
       }
     });
   }
+  
+  // Close cart on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const cartSidebar = document.getElementById('cartSidebar');
+      const cartOverlay = document.getElementById('cartOverlay');
+      if (cartSidebar && cartSidebar.classList.contains('open')) {
+        cartSidebar.classList.remove('open');
+        if (cartOverlay) {
+          cartOverlay.classList.remove('active');
+        }
+        document.body.style.overflow = '';
+      }
+    }
+  });
 }
 
 function init() {
+  // Re-query elements in case DOM wasn't ready when script loaded
+  const currentMenuToggle = document.getElementById("menuToggle");
+  const currentDrawer = document.querySelector(".lm-drawer");
+  
   markActiveNav();
   buildProductSlider();
   handleNavButtons();
   enhanceHeader();
   handleBackToTop();
-  initMenuToggle();
+  
+  // Fix menu toggle - use current elements instead of top-level variables
+  if (currentMenuToggle && currentDrawer) {
+    currentMenuToggle.addEventListener("click", () => {
+      const isOpen = currentDrawer.classList.contains("open");
+      currentDrawer.classList.toggle("open");
+      currentMenuToggle.setAttribute("aria-expanded", !isOpen ? "true" : "false");
+      document.body.style.overflow = !isOpen ? "hidden" : "";
+    });
+    
+    currentDrawer.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        currentDrawer.classList.remove("open");
+        currentMenuToggle.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+      });
+    });
+  }
+  
   initStoreLocator();
   initScrollAnimations();
   initCart();
   initProductDetails();
   initProductsPage();
 }
+
+// DOMContentLoaded listener is at the top - removed duplicate
 
 // Product Details Modal
 function showProductDetails(productId) {
