@@ -12,33 +12,53 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body data-page="find-store">
-    <div class="announcement">
+  <body data-page="find-store" class="no-js">
+    <div class="lm-banner">
       <p>
         Products with characterizing flavors are not for sale in California and
         are not available for purchase or shipment to consumers in California.
       </p>
     </div>
 
-    <header class="site-header">
-      <div class="brand">
-        <button
-          id="menuToggle"
-          class="menu-toggle"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-        >
+    <header class="lm-header" data-sticky>
+      <div class="header-inner">
+        <a class="lm-logo" href="index.html" aria-label="Lost Mary home">
+          <span>LOST</span><span>MARY</span>
+        </a>
+
+        <nav class="lm-nav" aria-label="Primary navigation">
+          <a href="index.html" data-page="index">Home</a>
+          <a href="about.html" data-page="about">About</a>
+          <a href="products.html" data-page="products">Products</a>
+          <a href="technology.html" data-page="technology">Technology</a>
+          <a href="planet.html" data-page="planet">Planet</a>
+          <a href="support.html" data-page="support">Support</a>
+          <a href="verify.html" data-page="verify">Verify</a>
+          <a href="find-store.html" data-page="find-store">Find a Store</a>
+        </nav>
+
+        <div class="header-cta">
+          <button id="cartToggle" class="cart-toggle" aria-label="Shopping cart">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-8 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+            </svg>
+            <span id="cartBadge" class="cart-badge" style="display: none;">0</span>
+          </button>
+          <a class="lm-btn ghost" href="verify.html">Verify Device</a>
+          <a class="lm-btn solid" href="#locator">Locate Retailers</a>
+        </div>
+
+        <button id="menuToggle" class="burger" aria-label="Toggle navigation" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <a href="index.html" class="logo" aria-label="Lost Mary home"
-          >LOST MARY</a
-        >
       </div>
-      <nav class="main-nav" aria-label="Primary">
+
+      <nav class="lm-drawer" aria-label="Mobile navigation">
+        <a href="index.html" data-page="index">Home</a>
+        <a href="about.html" data-page="about">About</a>
         <a href="products.html" data-page="products">Products</a>
-        <a href="about.html" data-page="about">About Us</a>
         <a href="technology.html" data-page="technology">Technology</a>
         <a href="planet.html" data-page="planet">Planet</a>
         <a href="blogs.html" data-page="blogs">Blogs</a>
@@ -46,10 +66,6 @@
         <a href="verify.html" data-page="verify">Verify</a>
         <a href="find-store.html" data-page="find-store">Find a Store</a>
       </nav>
-      <div class="header-cta">
-        <a class="btn ghost" href="verify.html">Verify Device</a>
-        <a class="btn solid" href="#locator">Locate Retailers</a>
-      </div>
     </header>
 
     <main>
@@ -284,9 +300,10 @@
       <section class="section-shell">
         <article class="content-card">
           <img
-            src="assets/banner-support.svg"
-            alt="Placeholder illustration for retailer partnership support"
+            src="images/banner-support.jpg"
+            alt="Retailer partnership support"
             loading="lazy"
+            onerror="this.onerror=null; this.src='images/banner-support.png';"
           />
           <h2>Retailer Support</h2>
           <p>
@@ -302,20 +319,43 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="product-modal">
+      <div class="product-modal-content"></div>
+    </div>
+
+    <!-- Cart Popup -->
+    <div id="cartOverlay" class="cart-overlay"></div>
+    <div id="cartSidebar" class="cart-sidebar">
+      <div class="cart-sidebar-header">
+        <h2>Shopping Cart</h2>
+        <button id="cartClose" class="cart-close" aria-label="Close cart">×</button>
+      </div>
+      <div id="cartItemsList" class="cart-items-list"></div>
+      <div class="cart-sidebar-footer">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+        <a href="checkout.html" class="lm-btn solid" style="width: 100%; margin-top: 1rem;">Checkout</a>
+        <a href="products.html" class="lm-btn outline" style="width: 100%; margin-top: 0.5rem;">Continue Shopping</a>
+      </div>
+    </div>
+
+    <footer class="lm-footer">
       <div class="footer-top">
-        <div class="warning">
+        <div class="footer-warning">
           <strong>Warning:</strong> This product contains nicotine. Nicotine is
           an addictive chemical.
         </div>
-        <div class="customer-service">
-          <h3>Customer Service</h3>
+        <div>
+          <h4>Customer Service</h4>
           <ul>
             <li>UK: +44 808 168 9466 (Mon-Fri, 9am - 6pm GMT)</li>
             <li>DE: +49 30 544 48333 (Mon-Fri, 9am - 6pm CET)</li>
           </ul>
         </div>
-        <div class="footer-links" id="verify">
+        <div class="footer-links">
           <a href="products.html">Products</a>
           <a href="about.html">About Us</a>
           <a href="technology.html">Technology</a>
@@ -323,19 +363,17 @@
           <a href="support.html">Support</a>
           <a href="verify.html">Verify</a>
           <a href="find-store.html">Find a Store</a>
+        </div>
+        <div class="footer-links">
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms &amp; Conditions</a>
           <a href="cookies.html">Cookies Policy</a>
+          <a href="blogs.html">News &amp; Updates</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>
-          Copyright &copy; 2025 Lost Mary. All rights reserved. | This site is a
-          fan-made clone for educational purposes.
-        </p>
-        <button class="btn ghost back-to-top" type="button">
-          Back to top
-        </button>
+        <p>© 2025 LOST MARY. All rights reserved.</p>
+        <button class="lm-btn ghost back-to-top" type="button">Back to top</button>
       </div>
     </footer>
 

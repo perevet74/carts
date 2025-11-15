@@ -1674,13 +1674,14 @@ function showProductDetails(productId) {
   const modalContent = modal.querySelector('.product-modal-content');
   if (!modalContent) return;
   
+  const imagePath = `images/${product.image}.jpg`;
+  const fallbackPath = `images/${product.image}.png`;
+  
   modalContent.innerHTML = `
     <button class="modal-close" onclick="closeProductModal()" aria-label="Close">×</button>
     <div class="product-modal-grid">
       <div class="product-modal-image">
-        <div class="product-image-placeholder theme-${product.theme}">
-          <span>${product.name}</span>
-        </div>
+        <img src="${imagePath}" alt="${product.name}" onerror="this.onerror=null; this.src='${fallbackPath}'; this.onerror=function(){this.style.display='none'; this.parentElement.innerHTML='<div class=\"product-image-placeholder theme-${product.theme}\"><span>${product.name}</span></div>';}">
       </div>
       <div class="product-modal-info">
         <span class="product-tag">${product.tag}</span>
@@ -1778,9 +1779,13 @@ function initProductsPage() {
   const productsGrid = document.getElementById('productsGrid');
   if (!productsGrid) return;
   
-  productsGrid.innerHTML = allProducts.map(product => `
+  productsGrid.innerHTML = allProducts.map(product => {
+    const imagePath = `images/${product.image}.jpg`;
+    const fallbackPath = `images/${product.image}.png`;
+    return `
     <article class="product-card" data-category="${product.category}">
       <div class="product-card-image theme-${product.theme}">
+        <img src="${imagePath}" alt="${product.name}" onerror="this.onerror=null; this.src='${fallbackPath}'; this.onerror=function(){this.style.display='none';}">
         <span class="product-card-tag">${product.tag}</span>
         ${product.originalPrice ? `<span class="product-discount">${Math.round((1 - product.price / product.originalPrice) * 100)}% OFF</span>` : ''}
       </div>
@@ -1800,7 +1805,8 @@ function initProductsPage() {
         ${product.inStock ? '' : '<p class="out-of-stock-badge">Out of Stock</p>'}
       </div>
     </article>
-  `).join('');
+  `;
+  }).join('');
   
   // Category filter
   const categoryFilters = document.querySelectorAll('.category-filter');
